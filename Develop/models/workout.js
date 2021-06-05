@@ -46,7 +46,7 @@ const workoutSchema = new Schema(
         }
     }
 );
-//should make the shema dynamic
+//should make the schema dynamic
 workoutSchema.virtual('totalDuration').get(function () {
     return this.exercises.reduce((total, exercise) => {
         return total + exercise.duration;
